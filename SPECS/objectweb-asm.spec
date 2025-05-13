@@ -2,11 +2,12 @@
 
 Name:           objectweb-asm
 Version:        9.1
-Release:        6%{?dist}
+Release:        8%{?dist}
 Summary:        Java bytecode manipulation and analysis framework
 License:        BSD
 URL:            https://asm.ow2.org/
 BuildArch:      noarch
+ExclusiveArch:  aarch64 ppc64le s390x x86_64 noarch
 
 # ./generate-tarball.sh
 Source0:        %{name}-%{version}.tar.gz
@@ -75,6 +76,12 @@ done
 %license LICENSE.txt
 
 %changelog
+* Sat Nov 23 2024 Marián Konček <mkoncek@redhat.com> - 9.1-8
+- Add noarch to ExclusiveArch
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 9.1-7
+- Disable building on i686
+
 * Tue Nov 19 2024 Marián Konček <mkoncek@redhat.com> - 9.1-6
 - Rebuild with regenerated Requires on Java
 
