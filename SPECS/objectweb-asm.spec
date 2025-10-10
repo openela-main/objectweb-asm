@@ -3,7 +3,7 @@
 
 Name:           objectweb-asm
 Version:        7.3.1
-Release:        3%{?dist}
+Release:        2%{?dist}
 Summary:        Java bytecode manipulation and analysis framework
 License:        BSD
 URL:            http://asm.ow2.org/
@@ -156,9 +156,6 @@ popd
 %license LICENSE.txt
 
 %changelog
-* Sat Jul 11 2020 Jiri Vanek <jvanek@redhat.com> - 7.3.1-3
-- Rebuilt for JDK-11, see https://fedoraproject.org/wiki/Changes/Java11
-
 * Wed May 06 2020 Mat Booth <mat.booth@redhat.com> - 7.3.1-2
 - Revert an upstream change to prevent breaking API change
 
